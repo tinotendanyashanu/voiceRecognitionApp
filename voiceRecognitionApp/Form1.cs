@@ -58,6 +58,43 @@ namespace voiceRecognitionApp
             {
                 Tino.SpeakAsync(DateTime.Now.ToString("h mm tt"));
             }
+            if (speech =="stop listening")
+            {
+                Tino.SpeakAsyncCancelAll();
+                ranNum = rnd.Next(1 , 2);
+                if (ranNum == 1)
+                {
+                    Tino.SpeakAsync("Yes sir");
+                }
+                
+                if (ranNum == 2)
+                {
+                    Tino.SpeakAsync("I am sorry i will be quiet");
+                }
+
+            }
+            if (speech=="stop Listening")
+            {
+                Tino.SpeakAsync("If you need me just ask");
+                recognizer.RecognizeAsyncCancel();
+                startlistening.RecognizeAsync(RecognizeMode.Multiple);
+            }
+            if (speech=="show commands")
+            {
+                string[] commands = (File.ReadAllLines(@"CommendsDF.txt"));
+                lstCommands.Items.Clear();
+                lstCommands.SelectionMode = SelectionMode.None;
+                lstCommands.Visible = true;
+                foreach (string command in commands)
+                {
+                    lstCommands.Items.Add(command);
+                }
+
+            }
+            if (speech== "Hide commands")
+            {
+                lstCommands.Visible=false;
+            }
 
         }
 
