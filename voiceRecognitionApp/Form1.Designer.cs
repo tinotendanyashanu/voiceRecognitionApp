@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lstCommands = new System.Windows.Forms.ListBox();
+            this.tmrspeek = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // lstCommands
@@ -42,6 +44,12 @@
             this.lstCommands.Name = "lstCommands";
             this.lstCommands.Size = new System.Drawing.Size(800, 450);
             this.lstCommands.TabIndex = 0;
+            // 
+            // tmrspeek
+            // 
+            this.tmrspeek.Enabled = true;
+            this.tmrspeek.Interval = 1000;
+            this.tmrspeek.Tick += new System.EventHandler(this.tmrspeek_Tick);
             // 
             // Form1
             // 
@@ -60,6 +68,7 @@
         #endregion
 
         private System.Windows.Forms.ListBox lstCommands;
+        private System.Windows.Forms.Timer tmrspeek;
     }
 }
 
