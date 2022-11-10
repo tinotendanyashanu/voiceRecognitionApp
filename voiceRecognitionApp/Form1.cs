@@ -54,7 +54,7 @@ namespace voiceRecognitionApp
             {
                 Tino.SpeakAsync("I am working normaly");
             }
-            if (speech == "What time is it ")
+            if (speech == "What time is it")
             {
                 Tino.SpeakAsync(DateTime.Now.ToString("h mm tt"));
             }

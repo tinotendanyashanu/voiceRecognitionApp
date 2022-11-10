@@ -38,12 +38,14 @@
             this.lstCommands.BackColor = System.Drawing.SystemColors.Desktop;
             this.lstCommands.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.lstCommands.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lstCommands.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.lstCommands.FormattingEnabled = true;
             this.lstCommands.ItemHeight = 16;
             this.lstCommands.Location = new System.Drawing.Point(0, 0);
             this.lstCommands.Name = "lstCommands";
             this.lstCommands.Size = new System.Drawing.Size(800, 450);
             this.lstCommands.TabIndex = 0;
+            this.lstCommands.Visible = false;
             // 
             // tmrspeek
             // 
