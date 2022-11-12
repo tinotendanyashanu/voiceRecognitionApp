@@ -48,7 +48,7 @@ namespace voiceRecognitionApp
 
             if (speech == "Hello")
             {
-                Tino.SpeakAsync("Hello, I am here");
+                Tino.SpeakAsync("Hello, I am here how can i help?");
             }
             if (speech == "How are you")
             {
@@ -73,7 +73,7 @@ namespace voiceRecognitionApp
                 }
 
             }
-            if (speech=="stop Listening")
+            if (speech=="Start Listening")
             {
                 Tino.SpeakAsync("If you need me just ask");
                 recognizer.RecognizeAsyncCancel();
@@ -126,6 +126,21 @@ namespace voiceRecognitionApp
                 startlistening.RecognizeAsync(RecognizeMode.Multiple);
                 Rectimeout = 0;
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Tino.SpeakAsync("Hey, my name is Tino");
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

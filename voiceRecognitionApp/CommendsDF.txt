@@ -2,6 +2,7 @@
 How are you 
 What time is it
 Wake up
-stop Listening
+stop listening
 show commands
 Hide commands
+Start Listening
